@@ -1,7 +1,7 @@
 import React from 'react'
 import './Info.css'
 import { Link } from 'react-router-dom'
-
+import {motion} from "framer-motion"
 function Info({
   image,
   title,
@@ -20,7 +20,11 @@ function Info({
         background,
       }}
     >
-      <img src={image} alt='' className='info__image' />
+      <motion.img 
+     
+      src={image} alt='' className='info__image' />
+
+
       <div className='info__text'>
         <h4>{title}</h4>
         <h6>{info}</h6>

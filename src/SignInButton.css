@@ -2,7 +2,7 @@
   display: inline-block;
   font-family: inherit;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   border-width: 1px;
   border-radius: 50px;
   padding: 7px 16px;
@@ -14,7 +14,7 @@
   cursor: pointer;
   outline: none;
   background: none;
-  color: rgba(0, 0, 0, 0.87);
+  color: white;
   font-size: 14px;
 }
 

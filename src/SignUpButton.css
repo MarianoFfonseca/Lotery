@@ -13,12 +13,12 @@
   transition: all 0.2s ease;
   cursor: pointer;
   outline: none;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   font-size: 14px;
 }
 
 .signUpButton:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: white;
   border-color: rgba(0, 0, 0, 0.7);
 }

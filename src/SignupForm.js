@@ -7,36 +7,36 @@ import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
 import { TextField } from "@material-ui/core";
 import { useForm } from "react-hook-form";
 import FormSubmit from "./FormSubmit";
-import { auth } from "./firebase";
 import { useDispatch } from "react-redux";
 import { login } from "./features/userSlice";
 import { useHistory } from "react-router-dom";
+import db, { auth } from "./firebase";
 
 function SignupForm() {
   const { register, handleSubmit, errors } = useForm();
   const [passwordShown, setPasswordShown] = useState(false);
   const dispatch = useDispatch();
   const history = useHistory();
+  
 
   const onSubmit = ({ fName, lName, email, password }) => {
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((userAuth) => {
-        userAuth.user
-          .updateProfile({
-            displayName: fName,
-          })
-          .then(() => {
-            dispatch(
-              login({
-                email: userAuth.user.email,
-                uid: userAuth.user.uid,
-                displayName: fName,
-              })
-            );
-            history.replace("/menu");
-          });
-      })
+
+    //Hacer que se suba a firebase
+    
+    auth.createUserWithEmailAndPassword(email, password).then((userAuth) => {
+      userAuth.user.updateProfile({
+        displayName: fName,
+      }).then(() => {
+          dispatch(
+            login({
+              email: userAuth.user.email,
+              uid: userAuth.user.uid,
+              displayName: fName,
+            })
+          )
+          history.replace("/menu");
+        })
+    })
       .catch((error) => alert(error.message));
   };
 

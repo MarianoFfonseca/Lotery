@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import ChevronRightRoundedIcon from '@material-ui/icons/ChevronRightRounded'
 import ChevronLeftRoundedIcon from '@material-ui/icons/ChevronLeftRounded'
+import "./MenuLink.css"
 
 const variants = {
   open: {
@@ -26,9 +27,9 @@ const variants = {
 export const MenuLink = ({ link, path, icon, goBackIcon, onClick, width }) => {
   return (
     <>
-      <Link to={path}>
+      <Link className='all' to={path}>
         <motion.li
-          style={{ width }}
+          style={{ width, color:"white" }}
           onClick={onClick}
           variants={variants}
           whileHover={{ scale: 1.1 }}

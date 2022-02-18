@@ -1,8 +1,10 @@
+
 .heading {
   text-align: center;
-  margin: 60px 0;
+  margin: 60px;
+  padding-bottom: 50px;
   text-transform: uppercase;
-  color: #1e3932;
+  color: #FCA311;
   font-weight: 800;
   font-size: 45px;
 }

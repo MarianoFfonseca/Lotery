@@ -5,21 +5,23 @@ import Featured from "../Featured";
 import Heading from "../Heading";
 import Info from "../Info";
 import { Fade } from "react-awesome-reveal";
+import Bitcoin from "../images/Bitcoin _Monochromatic.svg"
+import { motion } from "framer-motion"
+import BuyBitcoin from '../images/Designer _Flatline.svg'
+
+import Bitcoin_Outline from '../images/Bitcoin _Outline.svg'
+import SecondBuyBitcoin from '../images/Bitcoin _Flatline.svg'
 
 function HomeScreen() {
   return (
     <div className="homeScreen">
-      <Fade>
-        <div className="homeScreen__top">
-          <h4>
-            We’re working hard to put the health and well-being of our partners
-            and customers first in all that we do. <Link>Learn more</Link>
-          </h4>
-        </div>
-      </Fade>
+
       <Fade>
         <div className="homeScreen__bottom">
-          <div className="homeScreen__bottomLeft">
+          <motion.div
+
+
+            className="homeScreen__bottomLeft">
             <h4>Investing in our communities</h4>
             <p>
               The Starbucks Foundation awarded grants to over 400 nonprofits
@@ -27,12 +29,24 @@ function HomeScreen() {
               Starbucks partners (employees).
             </p>
             <button>Learn more</button>
-          </div>
+          </motion.div>
           <div className="homeScreen__bottomRight">
-            <img
-              src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-68026.jpg"
-              alt=""
+
+            <motion.img
+              animate={{ y: 15, x: 20 }}
+              initial={{ y: -30 }}
+              transition={{ yoyo: Infinity, duration: 2 }}
+              drag
+              dragConstraints={{
+                top: -50,
+                left: -50,
+                right: 50,
+                bottom: 50,
+              }}
+              src={Bitcoin_Outline}
+              alt="Image of bitcoin"
             />
+
           </div>
         </div>
       </Fade>
@@ -46,22 +60,22 @@ function HomeScreen() {
             info="Say yes to sips of delight with our Honey Almondmilk Flat White and new Honey Almondmilk Cold Brew."
             link="Explore the honey drinks"
             path=""
-            image="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-68069.png"
+            image={BuyBitcoin}
             background="#f0ebe0"
-            color="#1e3932"
+            color="#000"
             className="featured__hoverLight"
           />
         </Fade>
         <Fade>
           <Featured
-            title="PISTACHIOOOOOOO"
+            title="PISTACHIO"
             info="Embrace creamy coffee bliss with our new Pistachio Latte and Pistachio Frappuccino® blended beverage."
             link="Try the new pistachio drinks"
             path=""
-            image="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-67826.png"
+            image={SecondBuyBitcoin}
             order="2"
             background="#f0ebe0"
-            color="#1e3932"
+            color="#000"
             className="featured__hoverLight"
           />
         </Fade>
@@ -69,7 +83,7 @@ function HomeScreen() {
       <Fade>
         <Heading heading="MORE TO DISCOVER" />
       </Fade>
-      <Fade>
+      <Fade className="Borrar">
         <div className="homeScreen__discover">
           <Info
             title="Order and pick up. Easy as that."

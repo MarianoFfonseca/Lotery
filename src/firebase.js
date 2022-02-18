@@ -11,8 +11,14 @@ const firebaseConfig = {
   measurementId: "G-TJ57YE8PPR"
 }
 
-const firebaseApp = firebase.initializeApp(firebaseConfig)
+const firebaseApp = !firebase.apps.length
+  ? firebase.initializeApp(firebaseConfig)
+  : firebase.app();
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+const twitterProvider = new firebase.auth.TwitterAuthProvider();
+const storage = firebase.storage();
 
-const auth = firebaseApp.auth()
-
-export { auth }
+export { auth, provider, twitterProvider, storage };
+export default db;

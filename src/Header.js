@@ -29,7 +29,6 @@ function Header({ menuPage }) {
       </div>
       <div className='header__right'>
         <Example />
-        <FindAStore />
         {!user ? (
           <>
             <Link to='/account/signin'>
