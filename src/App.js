@@ -17,6 +17,11 @@ import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
 import MenuScreen from "./screens/MenuScreen";
 import SignupScreen from "./screens/SignupScreen";
+import FormInvestingCoin from "./FormInvesting/FormInvestingCoin"
+import FormInvestingDay from "./FormInvesting/FormInvestingDay"
+
+import Succes from "./FormInvesting/AfterCheckOut/Succes"
+import Cancel from "./FormInvesting/AfterCheckOut/Cancel"
 
 function App() {
   const user = useSelector(selectUser);
@@ -57,6 +62,7 @@ function App() {
           <Route exact path="/account/create">
             {user ? <Redirect to="/menu" /> : <SignupScreen />}
           </Route>
+          {/* For the menu */}
           <Route exact path="/menu">
             {!user ? (
               <Redirect to="/account/signin" />
@@ -67,6 +73,27 @@ function App() {
               </>
             )}
           </Route>
+          {/* For the form
+          <Route exact path="/form">
+                <Header />
+                <FormInvestingCoin />
+          </Route> */}
+
+          <Route exact path="/formCoin">
+                <Header />  
+                <FormInvestingCoin />
+          </Route>
+          <Route exact path="/cancel">
+                <Header />  
+                <Cancel />
+          </Route>
+          <Route exact path="/succes">
+                <Header />  
+                <Succes />
+          </Route>
+
+
+
           <Route exact path="/menu/featured">
             <Header />
             <FeaturedScreen />

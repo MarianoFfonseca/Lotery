@@ -12,7 +12,7 @@ function MenuHeader() {
           className={`${index === 0 && 'menuHeader__link--active'}`}
           onClick={() => setIndex(0)}
         >
-          All products
+          Principal page
         </Link>
         <Link
           to='/menu/featured'

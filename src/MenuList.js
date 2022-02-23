@@ -7,7 +7,7 @@ function MenuList() {
   return (
     <div className='menuList'>
       <div className='menuList__container'>
-        <h4>Drinks</h4>
+        <h4>For investing</h4>
         <div className='menuList__items'>
           {menuList.map((menuListCategory) =>
             menuListCategory.drinks.map((menuListItem) => (
@@ -17,7 +17,7 @@ function MenuList() {
         </div>
       </div>
       <div className='menuList__container'>
-        <h4>Food</h4>
+        <h4>Info for investing</h4>
         <div className='menuList__items'>
           {menuList.map((menuListCategory) =>
             menuListCategory.food.map((menuListItem) => (
@@ -27,20 +27,10 @@ function MenuList() {
         </div>
       </div>
       <div className='menuList__container'>
-        <h4>At Home Coffee</h4>
+        <h4>About</h4>
         <div className='menuList__items'>
           {menuList.map((menuListCategory) =>
             menuListCategory.atHomeCoffee.map((menuListItem) => (
-              <Link>{menuListItem.type}</Link>
-            ))
-          )}
-        </div>
-      </div>
-      <div className='menuList__container'>
-        <h4>Merchandise</h4>
-        <div className='menuList__items'>
-          {menuList.map((menuListCategory) =>
-            menuListCategory.merchandise.map((menuListItem) => (
               <Link>{menuListItem.type}</Link>
             ))
           )}

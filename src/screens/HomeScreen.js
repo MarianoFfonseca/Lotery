@@ -33,7 +33,7 @@ function HomeScreen() {
           <div className="homeScreen__bottomRight">
 
             <motion.img
-              animate={{ y: 15, x: 20 }}
+              animate={{ y: 25, x: 20 }}
               initial={{ y: -30 }}
               transition={{ yoyo: Infinity, duration: 2 }}
               drag

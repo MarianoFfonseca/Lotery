@@ -37,7 +37,11 @@ function SignupForm() {
           history.replace("/menu");
         })
     })
-      .catch((error) => alert(error.message));
+    
+      .catch((error) => alert(error.message))
+      
+      
+      ;
   };
 
   return (

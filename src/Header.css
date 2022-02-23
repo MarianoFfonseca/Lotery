@@ -43,10 +43,6 @@
   font-size: 14px;
 }
 
-.header__left > a:hover {
-  color: #008248;
-  transition: all 0.1s;
-}
 
 .header__logout > a {
   color: white;
@@ -59,7 +55,7 @@
 }
 
 .header__logout > a:hover {
-  color: #008248;
+  color: #68e1fd;
   transition: all 0.1s;
 }
 
@@ -82,7 +78,8 @@
   }
   .header__menuPage {
     position: inherit;
-    background-color: black;
+    background-color: black
+    ;
   }
   .header__logout {
     display: none;
