@@ -1,11 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-For install Npm 
-
-npm cache clean --force
-npm rebuild
-npm install
-npm start
+For install npm install --force
+For install a package npm i xxxx --force
 
 ## Available Scripts
 
